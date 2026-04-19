@@ -1,0 +1,31 @@
+# Render.com blueprint for ICEN backend + MongoDB
+# Deploy: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: icen-backend
+    env: python
+    plan: starter
+    rootDir: backend
+    buildCommand: "pip install --extra-index-url https://d33sy5i8bnduwe.cloudfront.net/simple/ -r requirements.txt"
+    startCommand: "uvicorn server:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: MONGO_URL
+        sync: false
+      - key: DB_NAME
+        value: icen_database
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: SENDER_EMAIL
+        value: onboarding@resend.dev
+      - key: ADMIN_NOTIFY_EMAIL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false

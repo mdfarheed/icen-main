@@ -1,0 +1,121 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 5: Jewel & Luxury mixed with Archetype 4: Swiss Precision (Institutional High-End)",
+  "positioning": "A Global Council Where Emerging Nations Shape the Future Together.",
+  "typography": {
+    "heading_font": "Playfair Display, serif",
+    "body_font": "Manrope, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "usage_rules": {
+      "h1": "font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white",
+      "h2": "font-serif text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white",
+      "h3": "font-sans text-xl md:text-2xl font-medium tracking-wide text-slate-200",
+      "body": "font-sans text-base md:text-lg text-slate-300 leading-relaxed",
+      "overline": "font-sans text-xs uppercase tracking-[0.2em] text-emerald-400 font-semibold"
+    },
+    "instructions": "Never use Inter or Roboto. Emphasize Playfair Display for authoritative, UN-style gravitas, paired with Manrope for Apple/Tesla-like minimalist readability."
+  },
+  "colors": {
+    "palette": {
+      "background_base": "#020617",
+      "background_surface": "#0F172A",
+      "background_elevated": "#1E293B",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#94A3B8",
+      "text_muted": "#64748B",
+      "electric_blue": "#0057FF",
+      "electric_blue_glow": "rgba(0, 87, 255, 0.4)",
+      "sdg_green": "#00C46A",
+      "sdg_green_glow": "rgba(0, 196, 106, 0.3)",
+      "border_subtle": "rgba(255,255,255,0.08)",
+      "border_active": "rgba(255,255,255,0.2)"
+    },
+    "surfaces": {
+      "glass": "bg-slate-900/60 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+      "solid": "bg-slate-900 border border-white/5",
+      "accent_card": "bg-gradient-to-br from-blue-900/20 to-slate-900/80 backdrop-blur-xl border border-blue-500/30"
+    }
+  },
+  "animations": {
+    "global_rules": "Smooth scrolling with Lenis is mandatory. Staggered fade-up entrances for content.",
+    "hover_states": "Micro-interactions on hover: slight lift (-translate-y-1), border illumination (border-white/30 or border-blue-500/50).",
+    "hero_globe": "Three.js (or react-globe.gl) rotating globe. Dark base, electric blue water/landmasses, emerald green connection arcs between emerging nations. White glowing particles.",
+    "counters": "Animated number counters in Framer Motion (use viewport triggers).",
+    "parallax": "Dark cinematic parallax scroll for the 'Why ICEN Exists' section. Text moves at different speed than background."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-blue-600 hover:bg-blue-500 text-white font-sans font-medium px-8 py-3.5 rounded-sm transition-all shadow-[0_0_15px_rgba(0,87,255,0.4)] hover:shadow-[0_0_25px_rgba(0,87,255,0.6)]",
+      "secondary": "bg-white/5 hover:bg-white/10 text-white border border-white/10 font-sans font-medium px-8 py-3.5 rounded-sm transition-all backdrop-blur-md",
+      "ghost": "text-slate-300 hover:text-white transition-colors underline-offset-4 hover:underline"
+    },
+    "cards": {
+      "membership": "Glassmorphism base. The 'Most Popular' tier must use the accent_card surface with an electric blue glowing border.",
+      "pillar": "Square bento items, bg-slate-900/50 border border-white/5. On hover, expand/reveal SDG-style description.",
+      "program": "Tall rectangular cards (portrait). Image heavy, dark gradient overlay at bottom for text readability."
+    },
+    "navigation": "Sticky, glassmorphic header (bg-slate-950/70 backdrop-blur-xl border-b border-white/10). UN-style SVG logo on left, desktop nav links centered, 'Apply' CTA button right."
+  },
+  "media": {
+    "logos": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/d78fab64-922e-4f0a-99f8-def3f822c3af/images/6a0b940062f420ed3d70eebb7d0b52bd4484b5ca770f69b784f19f6d5427c391.png",
+        "description": "ICEN Emblem / Logo - Minimalist abstract global council emblem logo design, white lines on black",
+        "category": "logo"
+      }
+    ],
+    "heroes": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/d78fab64-922e-4f0a-99f8-def3f822c3af/images/0fe3ca1cb790ff0eeb0559a547e2a8af12754a0babc9e2493a0af51a0d3e6524.png",
+        "description": "Abstract dark background texture, deep navy with subtle glowing electric blue geometric lines. Place BEHIND the 3D globe.",
+        "category": "background"
+      }
+    ],
+    "content": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/d78fab64-922e-4f0a-99f8-def3f822c3af/images/5f550a39a10e456fd0913fe523ce242d3ea26e7505ca19e680ddd12f308dbed8.png",
+        "description": "Cinematic wide shot of a modern city in an emerging nation at dusk. Use for 'Why ICEN Exists' parallax section.",
+        "category": "story_parallax"
+      },
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/d78fab64-922e-4f0a-99f8-def3f822c3af/images/740f141fe6a571cdc1038e2eb98909a28c984908ac2f34f7fdc35a279781cadf.png",
+        "description": "High-end professional photography of diverse global leaders at an ultra-modern summit. Use for Programs/Summit cards.",
+        "category": "programs"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1758603497204-d06a0964e053?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHx1bml0ZWQlMjBuYXRpb25zJTIwYnVpbGRpbmclMjBuaWdodHxlbnwwfHx8fDE3NzY1MDcwMDZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Modern illuminated building at night. Use for Governance or Chapters section.",
+        "category": "infrastructure"
+      }
+    ]
+  },
+  "page_layouts": {
+    "Home": {
+      "sections": [
+        "Hero: Deep navy background, 3D rotating globe (Three.js), Electric Blue & Green arcs, 'ICEN' typography overlay. CTAs: Apply, Explore.",
+        "Stats: Grid of 4, minimalist, large serif animated counters (50+, 12, 8, 10K+).",
+        "Pillars Grid: 12-item bento grid of interactive SDG-style icons.",
+        "Story Parallax: 'Why ICEN Exists'. Dark cinematic scrolling over the parallax_cinematic_city image. Huge serif text.",
+        "Global Structure: Interactive world map UI (can use SVG or canvas).",
+        "Membership Preview: 3 Glassmorphic cards.",
+        "Final CTA: Deep navy, centered text: 'The World Does Not Wait. Neither Should You.' Blue primary button."
+      ]
+    },
+    "About_ICEN": "Detailed history, mission, and vision. Text-heavy but structured beautifully with large serif pull-quotes. Parallax imagery.",
+    "Pillars": "Deep dive into the 12 pillars. Use a stacked layout with alternating left/right text-to-image alignments.",
+    "Membership": "Pricing/Tier style page but institutional. 3 Glass cards. Feature comparison table with extreme precision (border-white/10).",
+    "Chapters_Regions": "Map-heavy or list-heavy bento grid of 8 regions.",
+    "Councils_Governance": "Contains the Governance flow-diagram. Use react-flow-renderer or custom SVG paths linking nodes. Node styles: Glassmorphism.",
+    "Programs": "Grid of large portrait cards (Summit, Accelerator, Policy Lab).",
+    "Apply": "Multi-step form wizard. Highly styled Shadcn UI inputs, dark mode, green success states.",
+    "Admin_Login": "Minimalist centered card on dark background. Glassmorphism.",
+    "Admin_Dashboard": "Sidebar nav. Data table of applications. Use Tailwind neutral gray/slate (Archetype 4 style) but keep it strictly dark mode. High data density."
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: framer-motion, lucide-react, three, @react-three/fiber, @react-three/drei, react-globe.gl, @studio-freight/react-lenis",
+    "DO NOT use Inter or Roboto. Setup Playfair Display (headings) and Manrope (body) via Google Fonts.",
+    "Use pure HTML/Tailwind for structural marketing layouts, relying on Shadcn ONLY for interactive logic (Forms, Dialogs, Tables).",
+    "Ensure all interactive elements have data-testid attributes for testing.",
+    "The UI MUST feel authoritative, dark, and extremely precise—no rounded bubbly shapes. Stick to rounded-sm or rounded-none to emulate high-end architectural/institutional design."
+  ]
+}

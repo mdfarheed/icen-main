@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  background: #F7F5EF;
+  color: #0A1628;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(0, 87, 255, 0.18); color: #0A1628; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #F1EEE6; }
+::-webkit-scrollbar-thumb { background: #D7D0BE; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #B9AF96; }
+
+/* Subtle grid overlay (light) */
+.icen-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(10,22,40,0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10,22,40,0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* Subtle grid overlay (dark — for dark sections) */
+.icen-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Radial spotlight (dark) */
+.icen-spotlight-dark {
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(0,87,255,0.28), transparent 60%),
+    radial-gradient(800px 500px at 100% 100%, rgba(0,143,76,0.12), transparent 60%),
+    #0A1628;
+}
+
+/* Overline tag */
+.icen-overline {
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #0057FF;
+  font-weight: 600;
+}
+.icen-overline-muted { color: #6B7280 !important; }
+.icen-overline-inv { color: #60A5FA !important; }
+
+/* Marquee keyframes */
+@keyframes marquee-l { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marquee-r { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.animate-marquee-l { animation: marquee-l linear infinite; width: max-content; }
+.animate-marquee-r { animation: marquee-r linear infinite; width: max-content; }
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.animate-marquee-l:hover, .animate-marquee-r:hover { animation-play-state: paused; }
+
+/* Mobile-first polish */
+@media (max-width: 640px) {
+  .icen-overline { font-size: 10px; letter-spacing: 0.26em; }
+  .icen-btn-primary, .icen-btn-ghost, .icen-btn-ghost-inv {
+    padding: 12px 20px; font-size: 12px;
+  }
+  /* Prevent long pillar titles from overflowing narrow cards */
+  .icen-card h3 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Line clamp helper */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hairline divider */
+.icen-rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(10,22,40,0.18), transparent);
+}
+.icen-rule-inv {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.22), transparent);
+}
+
+/* Primary button — navy fill for institutional feel */
+.icen-btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  background: #0A1628;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid #0A1628;
+  transition: all 0.25s ease;
+}
+.icen-btn-primary:hover {
+  background: #0057FF;
+  border-color: #0057FF;
+  box-shadow: 0 10px 30px rgba(0,87,255,0.25);
+}
+
+/* Ghost button on light bg */
+.icen-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  background: transparent;
+  color: #0A1628;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(10,22,40,0.25);
+  transition: all 0.25s ease;
+}
+.icen-btn-ghost:hover {
+  border-color: #0A1628;
+  background: rgba(10,22,40,0.04);
+}
+
+/* Inverse ghost (on dark sections) */
+.icen-btn-ghost-inv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.25s ease;
+}
+.icen-btn-ghost-inv:hover {
+  border-color: #ffffff;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Card surface — white paper with warm ivory shadow */
+.icen-card {
+  background: #FFFFFF;
+  border: 1px solid #E6E1D5;
+  transition: all 0.35s ease;
+}
+.icen-card:hover {
+  border-color: #0A1628;
+  box-shadow: 0 1px 0 rgba(10,22,40,0.06), 0 18px 48px rgba(10,22,40,0.08);
+}
+
+/* Dark panel (for featured content like hero globe) */
+.icen-panel-dark {
+  background: #0A1628;
+  color: #ffffff;
+}
+
+@layer base {
+  :root {
+    --background: 43 22% 95%;          /* ivory */
+    --foreground: 214 57% 10%;         /* deep navy */
+    --card: 0 0% 100%;
+    --card-foreground: 214 57% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 57% 10%;
+    --primary: 220 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 43 30% 92%;
+    --secondary-foreground: 214 57% 10%;
+    --muted: 43 30% 92%;
+    --muted-foreground: 215 20% 40%;
+    --accent: 43 30% 92%;
+    --accent-foreground: 214 57% 10%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 20% 86%;
+    --input: 40 20% 86%;
+    --ring: 220 100% 50%;
+    --radius: 0.25rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+}
+
+@layer base {
+  [data-debug-wrapper="true"] { display: contents !important; }
+  [data-debug-wrapper="true"] > * {
+    margin-left: inherit; margin-right: inherit;
+    margin-top: inherit; margin-bottom: inherit;
+    padding-left: inherit; padding-right: inherit;
+    padding-top: inherit; padding-bottom: inherit;
+    column-gap: inherit; row-gap: inherit; gap: inherit;
+    border-left-width: inherit; border-right-width: inherit;
+    border-top-width: inherit; border-bottom-width: inherit;
+    border-left-style: inherit; border-right-style: inherit;
+    border-top-style: inherit; border-bottom-style: inherit;
+    border-left-color: inherit; border-right-color: inherit;
+    border-top-color: inherit; border-bottom-color: inherit;
+  }
+}

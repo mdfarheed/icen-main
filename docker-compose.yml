@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   backend:
     build:
@@ -14,7 +12,7 @@ services:
     build:
       context: ./frontend
       args:
-        REACT_APP_BACKEND_URL: http://45.13.59.233:5009
+        REACT_APP_BACKEND_URL: https://api.theicen.org   # ✅ FIXED
     restart: unless-stopped
     ports:
       - "3011:80"

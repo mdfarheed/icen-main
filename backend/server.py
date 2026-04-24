@@ -374,7 +374,7 @@ async def upload_media(file: UploadFile = File(...), current: dict = Depends(get
         "created_at": datetime.now(timezone.utc).isoformat(),
         "uploaded_by": current.get("email"),
     })
-    url = f"{FRONTEND_URL.rstrip('/')}/api/media/{media_id}"
+    url = f"https://api.theicen.org/api/media/{media_id}"
     return {"id": media_id, "url": url, "size": len(data), "content_type": file.content_type}
 
 

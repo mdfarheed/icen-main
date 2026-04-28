@@ -1,25 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/0.9">
-  <url><loc>/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>/about</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>/pillars</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>/pillars/sovereign-economy</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/technology-sovereignty</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/climate-energy</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/peace-security</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/trade-capital</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/science-research</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/education-talent</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/health-longevity</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/infrastructure</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/culture-soft-power</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/governance-rule-of-law</loc><priority>0.7</priority></url>
-  <url><loc>/pillars/youth-future</loc><priority>0.7</priority></url>
-  <url><loc>/membership</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>/chapters</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>/governance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>/programs</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>/apply</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>/research</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://theicen.org/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/about</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/sovereign-economy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/technology-sovereignty</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/climate-energy</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/peace-security</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/trade-capital</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/science-research</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/education-talent</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/health-longevity</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/infrastructure</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/culture-soft-power</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/governance-rule-of-law</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/pillars/youth-future</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/membership</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/chapters</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/governance</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/programs</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/apply</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://theicen.org/research</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

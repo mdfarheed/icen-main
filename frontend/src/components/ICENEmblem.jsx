@@ -54,7 +54,7 @@ export function ICENWordmark({ className = "", variant = "dark", compact = false
   return (
     <div className={`flex items-center gap-3 md:gap-4 ${className}`} data-testid="icen-wordmark">
       {/* <ICENEmblem size={compact ? 38 : 48} variant={variant} /> */}
-      <img src={logo} alt="icen logo" />
+      <img src={logo} className="w-15 h-15" alt="icen logo" />
       <div className="leading-tight">
         <div className={`font-serif ${compact ? "text-[20px]" : "text-[24px]"} tracking-[0.22em] ${ink} font-semibold`}>ICEN</div>
         <div className={`${compact ? "text-[8.5px]" : "text-[9.5px]"} tracking-[0.26em] uppercase ${sub} font-sans font-semibold mt-0.5 hidden sm:block`}>

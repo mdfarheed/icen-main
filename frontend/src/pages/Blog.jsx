@@ -17,6 +17,8 @@ export default function Blog() {
     axios.get(`${API}/blog`).then(r => setItems(r.data.items || [])).finally(() => setLoading(false));
   }, []);
 
+    console.log("base", API);
+
   const tags = useMemo(() => {
     const set = new Set();
     items.forEach(i => (i.tags || []).forEach(t => set.add(t)));

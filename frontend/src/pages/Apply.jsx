@@ -3,7 +3,7 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check, AlertCircle } from "lucide-react";
 import { TIERS, PILLARS } from "../content/icen";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -63,7 +63,35 @@ export default function Apply() {
 
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory min-h-screen relative" data-testid="apply-page">
-      <SEO title="Apply for Membership" description="Submit your candidacy for ICEN membership. Reviewed by the Secretariat within 7–10 business days." path="/apply" />
+      <SEO
+  title="Apply for ICEN Membership | International Council for Emerging Nations"
+  description="Apply for ICEN membership and join a global council of emerging nations, policymakers, innovators, diplomats, and strategic leaders shaping the future."
+  keywords="ICEN membership application, apply for ICEN, emerging nations council, international leadership network, global diplomacy, policy leaders, sovereignty, international cooperation"
+  path="/apply"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+
+    name: "Apply for ICEN Membership",
+
+    description:
+      "Apply for ICEN membership and join a global council of emerging nations, policymakers, innovators, diplomats, and strategic leaders shaping the future.",
+
+    url: "https://theicen.org/apply",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN membership, emerging nations, diplomacy, international cooperation, policy leadership",
+  }}
+/>
       <div className="absolute inset-0 icen-grid-light opacity-60" />
       <div className="relative max-w-[900px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">Apply</div>

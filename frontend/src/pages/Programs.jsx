@@ -2,12 +2,40 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { PROGRAMS } from "../content/icen";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 export default function Programs() {
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory" data-testid="programs-page">
-      <SEO title="Programs" description="Instruments of consequence — Summit, Accelerator, Policy Lab, Fellows, Capital Bridge, and Observatory." path="/programs" />
+      <SEO
+  title="ICEN Programs | Global Policy, Innovation & Leadership Initiatives"
+  description="Explore ICEN programs including global summits, policy labs, fellowships, accelerators, research observatories, and strategic initiatives empowering emerging nations worldwide."
+  keywords="ICEN programs, global summit, policy lab, international fellowship, emerging nations accelerator, global innovation, diplomacy programs, leadership initiatives"
+  path="/programs"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+
+    name: "ICEN Programs",
+
+    description:
+      "Explore ICEN programs including summits, policy labs, fellowships, accelerators, observatories, and strategic initiatives for emerging nations.",
+
+    url: "https://theicen.org/programs",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN programs, global leadership, policy innovation, diplomacy, emerging nations, fellowships",
+  }}
+/>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">Programs</div>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-icen-ink leading-[1.04] tracking-tight max-w-4xl">

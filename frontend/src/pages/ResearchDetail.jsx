@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { ArrowLeft, Download, Users } from "lucide-react";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -25,7 +25,49 @@ export default function ResearchDetail() {
 
   return (
     <article className="pt-[120px] pb-24 bg-icen-ivory" data-testid="research-detail">
-      <SEO title={paper.title} description={paper.abstract} image={paper.cover_image} path={`/research/${paper.slug}`} type="article" />
+      <SEO
+  title={`${paper.title} | ICEN Research`}
+  description={paper.abstract}
+  keywords={`${paper.title}, ICEN Research, emerging nations, global policy, ${paper.pillar}, ${(paper.authors || []).join(", ")}`}
+  image={paper.cover_image}
+  path={`/research/${paper.slug}`}
+  type="article"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+
+    headline: paper.title,
+
+    description: paper.abstract,
+
+    image: paper.cover_image,
+
+    author: (paper.authors || []).map((author) => ({
+      "@type": "Person",
+      name: author,
+    })),
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    datePublished: paper.published_at,
+
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://theicen.org/research/${paper.slug}`,
+    },
+
+    about: paper.pillar,
+
+    keywords: `${paper.pillar}, ${(paper.authors || []).join(", ")}`,
+  }}
+/>
       <div className="max-w-[820px] mx-auto px-6 lg:px-10">
         <Link to="/research" className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-icen-muted hover:text-icen-ink mb-8">
           <ArrowLeft size={13} /> Research Library
@@ -41,7 +83,7 @@ export default function ResearchDetail() {
       {paper.cover_image && (
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10 mt-12">
           <div className="aspect-[16/7] w-full overflow-hidden">
-            <img src={paper.cover_image} alt={paper.title} className="w-full h-full object-cover" />
+            <img src={paper.cover_image} alt={paper.title} loading="lazy" className="w-full h-full object-cover" />
           </div>
         </div>
       )}

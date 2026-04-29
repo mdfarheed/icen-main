@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { REGIONS } from "../content/icen";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 export default function Chapters() {
   const [active, setActive] = useState(REGIONS[0].id);
@@ -9,7 +9,35 @@ export default function Chapters() {
 
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory" data-testid="chapters-page">
-      <SEO title="Chapters & Regions" description="Eight regional chapters. Fifty-plus countries. Explore the ICEN global network by region." path="/chapters" />
+     <SEO
+  title="ICEN Chapters & Regional Network | Emerging Nations Worldwide"
+  description="Explore ICEN’s global regional chapters connecting emerging nations, policymakers, diplomats, innovators, and strategic leaders across multiple regions worldwide."
+  keywords="ICEN chapters, global regional network, emerging nations, international cooperation, diplomacy, global leadership, regional councils, multilateral organization"
+  path="/chapters"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+
+    name: "ICEN Chapters & Regions",
+
+    description:
+      "Explore ICEN’s global regional chapters connecting emerging nations, policymakers, diplomats, innovators, and strategic leaders worldwide.",
+
+    url: "https://theicen.org/chapters",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN chapters, emerging nations network, global diplomacy, regional governance, international collaboration",
+  }}
+/>
       <div className="max-w-[1300px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">Chapters & Regions</div>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-icen-ink leading-[1.04] tracking-tight max-w-4xl">

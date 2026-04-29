@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FileText, Download, Users } from "lucide-react";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const PAGE_SIZE = 8;
@@ -34,7 +34,35 @@ export default function Research() {
 
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory" data-testid="research-page">
-      <SEO title="Research Library" description="Peer-reviewed research papers, policy frameworks, and indices from ICEN's twelve pillars and Observatory." path="/research" />
+      <SEO
+  title="ICEN Research Library | Policy Papers & Global Frameworks"
+  description="Explore ICEN’s research library featuring policy papers, strategic frameworks, governance studies, economic research, sovereignty initiatives, and emerging nation development insights."
+  keywords="ICEN research, policy papers, governance studies, sovereignty research, emerging nations, global development, strategic frameworks, diplomacy research, international policy"
+  path="/research"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+
+    name: "ICEN Research Library",
+
+    description:
+      "Explore ICEN’s research library featuring policy papers, governance studies, sovereignty initiatives, and strategic frameworks for emerging nations.",
+
+    url: "https://theicen.org/research",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN research, global policy, emerging nations, governance studies, diplomacy, international development",
+  }}
+/>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">Research Library</div>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-icen-ink leading-[1.04] tracking-tight max-w-4xl">

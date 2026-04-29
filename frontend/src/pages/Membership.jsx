@@ -1,13 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 import { TIERS } from "../content/icen";
 
 export default function Membership() {
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory relative" data-testid="membership-page">
-      <SEO title="Membership" description="Four tiers. One standard of rigor. Observer, Fellow, Council Member, and Founding Nation tracks — by application and nomination." path="/membership" />
+      <SEO
+  title="ICEN Membership | Global Council for Emerging Nations"
+  description="Explore ICEN membership tiers including Observer, Fellow, Council Member, and Founding Nation programs designed for leaders, policymakers, innovators, and institutions shaping emerging nations."
+  keywords="ICEN membership, emerging nations council, global leadership network, international cooperation, diplomacy, policy leaders, sovereign development, global governance"
+  path="/membership"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+
+    name: "ICEN Membership",
+
+    description:
+      "Explore ICEN membership tiers designed for leaders, policymakers, innovators, institutions, and emerging nations shaping the future.",
+
+    url: "https://theicen.org/membership",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN membership, global leadership, emerging nations, diplomacy, international policy, governance",
+  }}
+/>
       <div className="absolute inset-0 icen-grid-light opacity-60" />
       <div className="relative max-w-[1300px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">Membership</div>

@@ -2,12 +2,40 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 export default function About() {
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory relative" data-testid="about-page">
-      <SEO title="About" description="An institution for the world that is becoming. ICEN is a non-state, non-partisan, non-aligned council convening emerging nations, their leaders, and the builders shaping them." path="/about" />
+      <SEO
+  title="About ICEN | International Council for Emerging Nations"
+  description="Learn about ICEN, a global council convening emerging nations, policymakers, innovators, and leaders shaping the future through sovereignty, diplomacy, and international cooperation."
+  keywords="About ICEN, International Council for Emerging Nations, emerging nations, global governance, diplomacy, sovereignty, international cooperation, policy leadership, multipolar world"
+  path="/about"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+
+    name: "About ICEN",
+
+    description:
+      "Learn about ICEN, a global council convening emerging nations, policymakers, innovators, and leaders shaping the future through sovereignty, diplomacy, and international cooperation.",
+
+    url: "https://theicen.org/about",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN, emerging nations, diplomacy, sovereignty, international cooperation",
+  }}
+/>
       <div className="absolute inset-0 icen-grid-light opacity-60" />
       <div className="relative max-w-[1100px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">About ICEN</div>

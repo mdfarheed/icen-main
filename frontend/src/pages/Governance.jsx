@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { GOVERNANCE } from "../content/icen";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 function FlowNode({ x, y, w = 220, h = 80, label, meta, accent = false, testid }) {
   return (
@@ -34,7 +34,35 @@ function AnimatedLine({ d, delay = 0 }) {
 export default function Governance() {
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory" data-testid="governance-page">
-      <SEO title="Councils & Governance" description="The architecture of the ICEN council — General Assembly, Secretariat, twelve Pillar Councils, and eight Regional Chapters." path="/governance" />
+      <SEO
+  title="ICEN Governance & Council Structure | Global Leadership Framework"
+  description="Explore the governance structure of ICEN including the General Assembly, Secretariat, Pillar Councils, regional chapters, and global leadership framework for emerging nations."
+  keywords="ICEN governance, ICEN council, global governance, emerging nations leadership, international council structure, regional chapters, policy councils, global diplomacy"
+  path="/governance"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+
+    name: "ICEN Governance & Council Structure",
+
+    description:
+      "Explore the governance structure of ICEN including the General Assembly, Secretariat, Pillar Councils, and regional leadership framework.",
+
+    url: "https://theicen.org/governance",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN governance, council structure, emerging nations leadership, global policy, international governance",
+  }}
+/>
       <div className="max-w-[1300px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">Councils & Governance</div>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-icen-ink leading-[1.04] tracking-tight max-w-4xl">

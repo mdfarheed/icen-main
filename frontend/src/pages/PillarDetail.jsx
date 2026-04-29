@@ -3,7 +3,7 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import * as Icons from "lucide-react";
 import { PILLARS, PILLAR_DETAILS } from "../content/icen";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 export default function PillarDetail() {
   const { slug } = useParams();
@@ -18,7 +18,40 @@ export default function PillarDetail() {
 
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory" data-testid={`pillar-detail-${slug}`}>
-      <SEO title={pillar.title} description={d?.summary || pillar.desc} image={d?.image} path={`/pillars/${slug}`} />
+      <SEO
+  title={`${pillar.title} | ICEN Pillars`}
+  description={d?.summary || pillar.desc}
+  keywords={`${pillar.title}, ICEN Pillars, emerging nations, sovereignty, international policy, diplomacy, global development`}
+  image={d?.image}
+  path={`/pillars/${slug}`}
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+
+    name: pillar.title,
+
+    headline: pillar.title,
+
+    description: d?.summary || pillar.desc,
+
+    image: d?.image,
+
+    url: `https://theicen.org/pillars/${slug}`,
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    about: pillar.title,
+
+    keywords: `${pillar.title}, ICEN, emerging nations, sovereignty`,
+  }}
+/>
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <Link to="/pillars" className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-icen-muted hover:text-icen-ink mb-10">
@@ -41,7 +74,7 @@ export default function PillarDetail() {
           </div>
           {d?.image && (
             <div className="aspect-[4/3] lg:aspect-auto lg:h-[520px] w-full overflow-hidden bg-icen-mist">
-              <img src={d.image} alt={pillar.title} className="w-full h-full object-cover" />
+              <img src={d.image} alt={pillar.title}  loading="lazy" className="w-full h-full object-cover" />
             </div>
           )}
         </div>

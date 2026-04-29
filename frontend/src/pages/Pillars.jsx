@@ -3,12 +3,40 @@ import { Link } from "react-router-dom";
 import * as Icons from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { PILLARS } from "../content/icen";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 
 export default function Pillars() {
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory" data-testid="pillars-page">
-      <SEO title="The Twelve Pillars" description="Twelve working groups. One sovereign agenda. Explore the pillars of ICEN's framework for emerging-nation power." path="/pillars" />
+      <SEO
+  title="ICEN Pillars | The Twelve Pillars of Emerging Nation Power"
+  description="Explore the twelve strategic pillars of ICEN covering sovereignty, technology, climate, governance, infrastructure, trade, education, health, peace, and global development."
+  keywords="ICEN pillars, emerging nations strategy, sovereignty, technology sovereignty, climate policy, governance, infrastructure development, trade policy, education reform, global diplomacy"
+  path="/pillars"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+
+    name: "ICEN Pillars",
+
+    description:
+      "Explore the twelve strategic pillars of ICEN designed to strengthen emerging nations through policy, governance, technology, infrastructure, diplomacy, and development.",
+
+    url: "https://theicen.org/pillars",
+
+    publisher: {
+      "@type": "Organization",
+      name: "ICEN",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://theicen.org/logo.jpg",
+      },
+    },
+
+    keywords:
+      "ICEN pillars, sovereignty, governance, emerging nations, technology policy, global development",
+  }}
+/>
       <div className="max-w-[1300px] mx-auto px-6 lg:px-10">
         <div className="icen-overline mb-6">The Twelve</div>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-icen-ink leading-[1.04] tracking-tight max-w-4xl">

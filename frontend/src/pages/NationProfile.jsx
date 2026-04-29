@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, MapPin, Users, Building2, Target } from "lucide-react";
-import SEO from "../components/SEO";
+import SEO from "../utils/SEO";
 import { NATION_BY_SLUG } from "../content/nations";
 
 export default function NationProfile() {
@@ -11,12 +11,55 @@ export default function NationProfile() {
 
   return (
     <div className="pt-[120px] pb-24 bg-icen-ivory" data-testid={`nation-profile-${slug}`}>
-      <SEO
-        title={`${nation.name} — Member Nation`}
-        description={`ICEN profile for ${nation.name}. Chapters, fellows, focus pillars, and engagement.`}
-        image={`https://flagcdn.com/w1280/${nation.iso}.png`}
-        path={`/nation/${slug}`}
-      />
+<SEO
+  title={`${nation.name} | ICEN Member Nation`}
+  description={`Explore ICEN's member nation profile for ${nation.name}, including regional chapters, fellows, strategic focus pillars, and international engagement initiatives.`}
+  keywords={`${nation.name}, ICEN member nation, ${nation.region}, emerging nations, global diplomacy, sovereignty, international cooperation, ${nation.focus.join(", ")}`}
+  image={`https://flagcdn.com/w1280/${nation.iso}.png`}
+  path={`/nation/${slug}`}
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "Country",
+
+    name: nation.name,
+
+    description: `ICEN profile for ${nation.name}. Chapters, fellows, focus pillars, and engagement.`,
+
+    image: `https://flagcdn.com/w1280/${nation.iso}.png`,
+
+    url: `https://theicen.org/nation/${slug}`,
+
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: nation.name,
+    },
+
+    additionalProperty: [
+      {
+        "@type": "PropertyValue",
+        name: "Region",
+        value: nation.region,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "Capital",
+        value: nation.capital,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "ICEN Fellows",
+        value: nation.fellows,
+      },
+      {
+        "@type": "PropertyValue",
+        name: "National Chapters",
+        value: nation.chapters,
+      },
+    ],
+
+    keywords: `${nation.name}, ${nation.region}, ${nation.focus.join(", ")}`,
+  }}
+/>
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-10">
         <Link to="/chapters" className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-icen-muted hover:text-icen-ink mb-8">
           <ArrowLeft size={13} /> Chapters & Regions
@@ -30,6 +73,7 @@ export default function NationProfile() {
                 src={`https://flagcdn.com/w1280/${nation.iso}.png`}
                 srcSet={`https://flagcdn.com/w640/${nation.iso}.png 1x, https://flagcdn.com/w1280/${nation.iso}.png 2x`}
                 alt={`Flag of ${nation.name}`}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
